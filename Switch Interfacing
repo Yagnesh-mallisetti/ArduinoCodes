@@ -1,0 +1,29 @@
+int switch1=0;
+int switch2=0;
+
+void setup()
+{
+  pinMode(5,INPUT);
+  pinMode(9,INPUT);
+  pinMode(12,OUTPUT);
+  pinMode(13,OUTPUT);
+}
+void loop()
+{
+  switch1=digitalRead(5);
+ if(switch1==HIGH)
+ {
+   digitalWrite(13,HIGH);
+   delay(1000);
+   digitalWrite(13,LOW);
+   delay(1000);
+ }
+    switch2=digitalRead(9);
+ if(switch2==HIGH)
+ {
+   digitalWrite(12,HIGH);
+   delay(1000);
+   digitalWrite(12,LOW);
+   delay(1000);
+ }
+}
