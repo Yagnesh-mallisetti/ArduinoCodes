@@ -1,0 +1,26 @@
+// Arduino Uno R3 -1 code
+
+char mystr[20]="Hello World";
+
+void setup()
+{
+  Serial.begin(9600);
+}
+void loop()
+{
+  Serial.write(mystr,20);
+  delay(1000);
+}
+
+// Arduino uno R3 -2 code
+char mystr[20];
+void setup(){
+  Serial.begin(9600);
+}
+void loop()
+{
+  Serial.readBytes(mystr,20);
+  Serial.println(mystr);
+  delay(1000);
+}
+  
